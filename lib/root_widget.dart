@@ -25,8 +25,6 @@ class _MobileScaffoldAppState extends State<MobileScaffoldApp> {
     _appRouter = AppRouter(
       appStateManager: _appStateManager,
     );
-
-    _appStateManager.getScale();
   }
 
   late GlobalKey<NavigatorState> navigatorKey;

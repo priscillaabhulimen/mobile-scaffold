@@ -1,12 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import '../navigation/app_state_manager.dart';
-
 class AppTheme {
   AppTheme._();
-
-  static final _appStateManager = AppStateManager();
+  //TODO: Setup/Edit theme data here
 
   static ThemeData lightTheme (){
     return ThemeData(
@@ -18,47 +15,47 @@ class AppTheme {
         primaryColor: const Color(0xFF16A6E9),
         primaryColorLight: const Color(0xFF3891CA),
         shadowColor: Colors.black54,
-        appBarTheme: AppBarTheme(
+        appBarTheme: const AppBarTheme(
             centerTitle: true,
-            iconTheme: const IconThemeData(
+            iconTheme: IconThemeData(
               color: Color(0xFF202020),
             ),
             titleTextStyle: TextStyle(
-              color: const Color(0xFF202020),
-              fontSize: 16.5 * _appStateManager.textScale,
+              color: Color(0xFF202020),
+              fontSize: 16.5,
             ),
-            titleSpacing: 1.5 * _appStateManager.textScale,
-            backgroundColor: const Color(0xFFFEFEFE),
+            titleSpacing: 1.5,
+            backgroundColor: Color(0xFFFEFEFE),
             elevation: 0
         ),
-        textTheme: TextTheme(
+        textTheme: const TextTheme(
             subtitle1: TextStyle(
-              color: const Color(0xFF202020),
+              color: Color(0xFF202020),
               fontWeight: FontWeight.bold,
-              fontSize: 18 * _appStateManager.textScale,
+              fontSize: 18,
             ),
             subtitle2: TextStyle(
-              color: const Color(0xFF202020),
+              color: Color(0xFF202020),
               fontWeight: FontWeight.bold,
-              fontSize: 15 * _appStateManager.textScale,
+              fontSize: 15,
             ),
             bodyText1: TextStyle(
-              color: const Color(0xFF202020),
-              fontSize: 12.5 * _appStateManager.textScale,
+              color: Color(0xFF202020),
+              fontSize: 12.5,
             ),
             bodyText2: TextStyle(
-              color: const Color(0xFF202020),
-              fontSize: 11 * _appStateManager.textScale,
+              color: Color(0xFF202020),
+              fontSize: 11,
             ),
             headline6: TextStyle(
-              color: const Color(0xFF202020),
+              color: Color(0xFF202020),
               fontWeight: FontWeight.bold,
-              fontSize: 24 * _appStateManager.textScale,
+              fontSize: 24,
             ),
             headline5: TextStyle(
-              color: const Color(0xFF202020),
+              color: Color(0xFF202020),
               fontWeight: FontWeight.w600,
-              fontSize: 28 * _appStateManager.textScale,
+              fontSize: 28,
             )
         )
     );
@@ -74,47 +71,47 @@ class AppTheme {
         primaryColor: const Color(0xFF16A6E9),
         primaryColorLight: const Color(0xFF3891CA),
         shadowColor: Colors.black54,
-        appBarTheme: AppBarTheme(
+        appBarTheme: const AppBarTheme(
             centerTitle: true,
-            iconTheme: const IconThemeData(
+            iconTheme: IconThemeData(
               color: Color(0xFFFEFEFE),
             ),
             titleTextStyle: TextStyle(
-              color: const Color(0xFFFEFEFE),
-              fontSize: 16.5 * _appStateManager.textScale,
+              color: Color(0xFFFEFEFE),
+              fontSize: 16.5,
             ),
-            titleSpacing: 1.5 * _appStateManager.textScale,
-            backgroundColor: const Color(0xFF202020),
+            titleSpacing: 1.5,
+            backgroundColor: Color(0xFF202020),
             elevation: 0
         ),
-        textTheme: TextTheme(
+        textTheme: const TextTheme(
             subtitle1: TextStyle(
-              color: const Color(0xFFFEFEFE),
+              color: Color(0xFFFEFEFE),
               fontWeight: FontWeight.bold,
-              fontSize: 18 * _appStateManager.textScale,
+              fontSize: 18,
             ),
             subtitle2: TextStyle(
-              color: const Color(0xFFFEFEFE),
+              color: Color(0xFFFEFEFE),
               fontWeight: FontWeight.bold,
-              fontSize: 15 * _appStateManager.textScale,
+              fontSize: 15,
             ),
             bodyText1: TextStyle(
-              color: const Color(0xFFFEFEFE),
-              fontSize: 12.5 * _appStateManager.textScale,
+              color: Color(0xFFFEFEFE),
+              fontSize: 12.5,
             ),
             bodyText2: TextStyle(
-              color: const Color(0xFFFEFEFE),
-              fontSize: 11 * _appStateManager.textScale,
+              color: Color(0xFFFEFEFE),
+              fontSize: 11,
             ),
             headline6: TextStyle(
-              color: const Color(0xFFFEFEFE),
+              color: Color(0xFFFEFEFE),
               fontWeight: FontWeight.bold,
-              fontSize: 24 * _appStateManager.textScale,
+              fontSize: 24,
             ),
             headline5: TextStyle(
-              color: const Color(0xFFFEFEFE),
+              color: Color(0xFFFEFEFE),
               fontWeight: FontWeight.w600,
-              fontSize: 28 * _appStateManager.textScale,
+              fontSize: 28,
             )
         )
     );
