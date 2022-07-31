@@ -1,9 +1,9 @@
 import 'package:flutter/cupertino.dart';
-import '../screens.dart';
-
+import 'package:mobile_app_scaffold/ui/views/splash/view.dart';
 import 'app_state_manager.dart';
 
-class AppRouter extends RouterDelegate with ChangeNotifier, PopNavigatorRouterDelegateMixin{
+class AppRouter extends RouterDelegate
+    with ChangeNotifier, PopNavigatorRouterDelegateMixin {
   @override
   late final GlobalKey<NavigatorState> navigatorKey;
 
@@ -11,12 +11,12 @@ class AppRouter extends RouterDelegate with ChangeNotifier, PopNavigatorRouterDe
 
   AppRouter({
     required this.appStateManager,
-  }) : navigatorKey = GlobalKey<NavigatorState>(){
+  }) : navigatorKey = GlobalKey<NavigatorState>() {
     appStateManager.addListener(notifyListeners);
   }
 
   @override
-  void dispose(){
+  void dispose() {
     appStateManager.removeListener(notifyListeners);
     super.dispose();
   }
@@ -29,23 +29,22 @@ class AppRouter extends RouterDelegate with ChangeNotifier, PopNavigatorRouterDe
       pages: [
         /* TODO: add conditional pages
         For example:
-        if(!appStateManager.isInitialised) SplashView.page
+         if (!appStateManager.isInitialised) SplashView.page(),
         */
       ],
     );
   }
 
-  bool _handlePopPage(Route<dynamic> route, result){
+  bool _handlePopPage(Route<dynamic> route, result) {
     if (!route.didPop(result)) {
       return false;
     }
 
     return true;
-
   }
 
   @override
-  Future<void> setNewRoutePath(configuration) async{
+  Future<void> setNewRoutePath(configuration) async {
     return;
   }
 }
