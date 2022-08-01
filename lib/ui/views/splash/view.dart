@@ -25,12 +25,7 @@ class _SplashViewState extends State<SplashView> {
       onModelReady: (model) => model.init(context),
       onDispose: (model) => model.dispose(),
       builder: (context, model, _) {
-        return Scaffold(
-          body: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [],
-          ),
-        );
+        return Scaffold();
       },
     );
   }
