@@ -4,13 +4,13 @@ import 'package:mobile_app_scaffold/ui/base/base_view.dart';
 import 'package:mobile_app_scaffold/ui/views/splash/view_model.dart';
 
 class SplashView extends StatefulWidget {
-  static MaterialPage page(){
+  static MaterialPage page() {
     return MaterialPage(
-      name: AppPages.splashPath,
-      key: ValueKey(AppPages.splashPath),
-      child: const SplashView()
-    );
+        name: AppPages.splashPath,
+        key: ValueKey(AppPages.splashPath),
+        child: const SplashView());
   }
+
   const SplashView({Key? key}) : super(key: key);
 
   @override
@@ -24,8 +24,8 @@ class _SplashViewState extends State<SplashView> {
       model: SplashViewModel(),
       onModelReady: (model) => model.init(context),
       onDispose: (model) => model.dispose(),
-      builder: (context, model, _){
-        return const Scaffold();
+      builder: (context, model, _) {
+        return Scaffold();
       },
     );
   }

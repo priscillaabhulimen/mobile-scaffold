@@ -7,11 +7,7 @@ List<SingleChildWidget> providers = [
   ...uiConsumableProviders,
 ];
 
-List<SingleChildWidget> independentServices = [
-  // ChangeNotifierProvider.value(value: UserProvider()),
-  // ChangeNotifierProvider.value(value: CardProvider()),
-  // ChangeNotifierProvider.value(value: MessageProvider()),
-];
+List<SingleChildWidget> independentServices = [];
 
 List<SingleChildWidget> dependentServices = [];
 
