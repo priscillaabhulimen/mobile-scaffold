@@ -3,8 +3,10 @@ import 'package:mobile_app_scaffold/utils/app_theme.dart';
 import 'package:oktoast/oktoast.dart';
 import 'package:provider/provider.dart';
 import 'core/providers/setup.dart';
-import 'navigation/app_router.dart';
-import 'navigation/app_state_manager.dart';
+import 'core/services/locator.dart';
+import 'core/services/navigation_service.dart';
+import 'core/navigation/app_router.dart';
+import 'core/navigation/app_state_manager.dart';
 
 class MobileScaffoldApp extends StatefulWidget {
   final bool isDebug;
@@ -27,7 +29,7 @@ class _MobileScaffoldAppState extends State<MobileScaffoldApp> {
     );
   }
 
-  late GlobalKey<NavigatorState> navigatorKey;
+  final GlobalKey<NavigatorState> _navigatorKey = locator<NavigationService>().navigatorKey;
 
   @override
   Widget build(BuildContext context) {
@@ -40,6 +42,7 @@ class _MobileScaffoldAppState extends State<MobileScaffoldApp> {
       ],
       child: OKToast(
         child: MaterialApp(
+          navigatorKey: _navigatorKey,
           debugShowCheckedModeBanner: widget.isDebug,
           darkTheme: AppTheme.darkTheme(),
           theme: AppTheme.lightTheme(),

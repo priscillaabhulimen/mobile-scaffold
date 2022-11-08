@@ -25,6 +25,7 @@ dependencies:
   flutter_svg:
   flutter_overlay_loader:
   url_launcher:
+  get_it:
 
 dev_dependencies:
   flutter_test:

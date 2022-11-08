@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mobile_app_scaffold/navigation/pages.dart';
+import 'package:mobile_app_scaffold/core/navigation/pages.dart';
 import 'package:mobile_app_scaffold/ui/base/base_view.dart';
 import 'package:mobile_app_scaffold/ui/views/splash/view_model.dart';
 
@@ -22,7 +22,7 @@ class _SplashViewState extends State<SplashView> {
   Widget build(BuildContext context) {
     return BaseView<SplashViewModel>(
       model: SplashViewModel(),
-      onModelReady: (model) => model.init(context),
+      onModelReady: (model) => model.init(),
       onDispose: (model) => model.dispose(),
       builder: (context, model, _) {
         return Scaffold();
