@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:mobile_app_scaffold/core/managers/disposable_provider.dart';
 
-class AppStateManager extends ChangeNotifier{
+class AppStateManager extends DisposableProvider{
   bool _initialised = false;
 
   bool get isInitialised => _initialised;
@@ -16,5 +17,10 @@ class AppStateManager extends ChangeNotifier{
   
     SystemNavigator.pop();
     notifyListeners();
+  }
+  
+  @override
+  void disposeValues() {
+    // TODO: implement disposeValues
   }
 }

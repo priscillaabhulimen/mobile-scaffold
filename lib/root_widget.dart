@@ -6,7 +6,7 @@ import 'core/providers/setup.dart';
 import 'core/services/locator.dart';
 import 'core/services/navigation_service.dart';
 import 'core/navigation/app_router.dart';
-import 'core/navigation/app_state_manager.dart';
+import 'core/managers/app_state_manager.dart';
 
 class MobileScaffoldApp extends StatefulWidget {
   final bool isDebug;

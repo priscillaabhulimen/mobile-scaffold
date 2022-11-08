@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:mobile_app_scaffold/ui/views/splash/view.dart';
-import 'app_state_manager.dart';
+import '../managers/app_state_manager.dart';
 
 class AppRouter extends RouterDelegate
     with ChangeNotifier, PopNavigatorRouterDelegateMixin {
